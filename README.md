@@ -13,7 +13,6 @@ This is a test parser for extracting newses and saving them to a CSV file using 
 1. **Clone the repository**:
     ```bash
     git clone https://github.com/KGFSB-agent/Sk_Parser.git
-    cd telegram-parser
     ```
 
 2. **Install Poetry**:
