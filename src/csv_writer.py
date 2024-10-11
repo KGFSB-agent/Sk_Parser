@@ -8,13 +8,11 @@ def write_csv(technologies, csv_path):
     Writes a dictionary with data about each news to a CSV file.
 
     Args:
-        newses (dict): A dictionary with data about each news.
+        technologies (dict): A dictionary with data about each technology.
         csv_path (str): The file path for the CSV file.
 
     Returns:
         None
-    
-    news_short_text_translated and news_main_text_translated was removed
     """
     output_dir = Path(os.path.dirname(csv_path))
     output_dir.mkdir(parents=True, exist_ok=True)

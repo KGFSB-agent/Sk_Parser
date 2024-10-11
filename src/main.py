@@ -1,27 +1,22 @@
-import os
 import time
-import asyncio
 from csv_writer import write_csv
-from selenium_parser_sk import selenium_parser, parse_news
+# from selenium_parser_sk import selenium_parser
+from test import selenium_parser
 
 
 def main():
     """
-    The main asynchronous function that handles scraping, parsing, translating,
-    and writing news data to a CSV file.
+    The main function that handles scraping, parsing, and writing technology data to a CSV file.
 
-    It scrapes news articles from multiple pages, translates their content, 
-    and writes the original and translated content to a CSV file. The execution 
-    time is measured to evaluate the performance.
+    It scrapes technology data from a given category, processes the content, 
+    and writes it to a CSV file. The execution time is measured to evaluate performance.
     """
 
     # Start the timer to measure total execution time
     start_time = time.time()
 
     html = selenium_parser("technology")
-    technologies_html, catalogue_title = html
-    response = parse_news(technologies_html, catalogue_title)
-    write_csv(response, "data/results.csv")
+    write_csv(html, "data/results.csv")
 
     end_time = time.time()
     print(f"Execution time: {end_time - start_time:.2f} sec")
