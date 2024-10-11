@@ -40,13 +40,5 @@ This is a test parser for extracting newses and saving them to a CSV file using 
         ```
 
 5. **Output**:
+    
     After running the script, the extracted messages will be saved in a CSV file located at `data/data/results.csv`. The file will include details like main sector, title, sectors, readiness lvl, description, advantages of the technology, references and technology url.
-
-        main_sector: str
-    title: str
-    sectors: str
-    readiness_lvl: str
-    description: str
-    advantages_of_the_technology: str
-    references: str
-    technology_url: str
